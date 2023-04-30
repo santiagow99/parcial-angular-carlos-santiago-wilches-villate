@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">TuSegundazo.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<img src="assets/images/image.jpg" style="width: 100%;">
+<div class="d-flex align-items-center">
+  <div class="col-lg-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="header">#</th>
+          <th class="header">Marca</th>
+          <th class="header">Línea</th>
+          <th class="header">Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehiculo of vehiculos">
+          <td>{{vehiculo.id}}</td>
+          <td>{{vehiculo.marca}}</td>
+          <td>{{vehiculo.linea}}</td>
+          <td>{{vehiculo.modelo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor="let brand of uniqueBrands">
+    Total {{brand}}: {{countBrand(brand)}}
+  </li>
+</ul>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted">Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</span>
+  </div>
+</footer>
